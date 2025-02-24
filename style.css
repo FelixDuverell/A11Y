@@ -85,7 +85,6 @@ a {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
-  overflow-x: scroll;
 }
 
 .input-container {
