@@ -19,7 +19,7 @@ setTimeout(() => {
 }, 5000)
 
 setTimeout(() => {
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 1000; i++) {
     console.log(i)
   }
 }, 1000)
