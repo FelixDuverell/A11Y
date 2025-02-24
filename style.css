@@ -92,11 +92,19 @@ a {
   background-color: #acacac40;
 }
 
-/* Bildcontainer med flexbox och ingen radbrytning */
+/* Bilderna placeras i en rad, centrerar dem horisontellt och vertikalt och lägger till ett mellanrum mellan bilderna */
 .image-container {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Definierar storleken på bilderna och gör att de täcker det angivna utrymmet utan att bli förvrängda  */
+.image-container img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
 }
 
 /* Input-fält i en container med kolumnlayout och flytande positionering */
@@ -177,14 +185,6 @@ a {
   transform: scale(0.1);
   font-size: 1px;
   padding: 1px;
-}
-
-/* Container för bild med dold överskott */
-.image-container {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  overflow: hidden;
 }
 
 /* Bild som roterar mellan -45 och 45 grader */
