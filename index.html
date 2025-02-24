@@ -1,4 +1,22 @@
+<!-- 
+ 1. Läs noga genom koden och identifiera alla tillgänglighetsproblem.
+ 
+ 2. Testa kör lighthouse i devtools(Google chrome) och se vilka problem som finns.
+
+ 3. Skriv en kort sammanfattning av vad som är fel och hur det kan åtgärdas.
+
+ 4. Skriv om koden så att den följer tillgänglighetsstandarder.
+
+ 5. Skriv en kort sammanfattning av vad du har ändrat och varför.
+
+ 6. Testa din nya kod med andra verktyg för tillgänglighet.
+
+ 7. Skriv en kort reflektion över hur det var att göra uppgiften. Vad var svårt? Vad lärde du dig?
+
+-->
+
 <!DOCTYPE html>
+<!-- <html lang="en"> -->
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +27,7 @@
 </head>
 
 <body>
-
+    <!-- Navigeringsmeny med dubblett-ID:n, inkonsekvent tabindex, och brutna länkar till en 404-sida. -->
     <nav class="navigation">
         <span class="nav-item" id="1" tabindex="-1"><a href="404.html" target="_blank">Home</a></span>
         <span class="nav-item" id="1" tabindex="-1"><a href="404.html" target="_blank">World</a></span>
@@ -17,18 +35,24 @@
         <span class="nav-item" id="1"><a href="404.html" target="_blank">Entertainment</a></span>
     </nav>
 
+    <!--  -->
     <div class="input-container">
         <input type="text" placeholder="Enter text">
         <button><a href="#">Submit</a></button>
     </div>
 
+    <!-- Dold text och klickbar div. 
+     .hidden-text är nästan osynlig p.g.a. låg opacity och roterad tex -->
     <p class="hidden-text">This text is invisible.</p>
     <div class="button">Click here!</div>
     <div class="container">
+
+        <!-- Två <h1>-taggar i .container kan påverka tillgänglighet och SEO. -->
         <h1>A11y News</h1>
         <h1></h1>
 
         <div class="article">
+            <!-- <marquee>(rullande text) kan vara en intressant effekt på en hemsida, men det kan också vara distraherande för besökarna. -->
             <marquee class="headline">Breaking News: ...!</marquee>
             <p>Scientists have discovered a new deep-sea fish with bioluminescent fins off the coast of Australia. The
                 unnamed species is believed to have unique traits that could contribute to future medical research and
@@ -39,6 +63,7 @@
         <div class="article" onclick="alert('This does nothing!')">
             <div>Lunar New Year: Celebrate with us!</div>
 
+            <!-- Bilder visas inte, varför? -->
             <div class="image-container">
                 <img src="/images/ocean.jpg">
                 <img src="/images/city.jpg">
@@ -48,16 +73,20 @@
             <p>Access the news by pressing the images</p>
         </div>
 
+        <!-- Allt för stor bild. För att motverka prestanda problem, ha koll på storleken på bilden -->
         <div class="article" style="display: none;">
             <p class="headline">Se en 50MB bild ladda långsamt!</p>
             <img src="http://upload.wikimedia.org/wikipedia/commons/3/3f/JPEG_example_flower.jpg" width="50000">
         </div>
+
+        <!-- Videor kräver mycket prestanda, kan vi ändra eller ta bort för att åstakomma bättre resultat -->
         <div class="article">
             <video autoplay muted loop src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
             <img src="http://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif">
         </div>
     </div>
 
+    <!-- En irriterande annons som alltid syns och innehåller en snurrande bild samt en vilseledande text -->
     <div id="fake-ad">
         <div class="top-section">
             <div class="image-container">
@@ -72,7 +101,7 @@
     </div>
 
 
-    <script src="/script.js"></script>
+    <script src="/script.js" defer></script>
 </body>
 
 </html>
