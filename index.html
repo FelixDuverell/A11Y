@@ -1,4 +1,15 @@
 <!-- 
+The A11Y Project är ett community-drivet initiativ som strävar efter att göra digital tillgänglighet enklare, 
+mer begriplig och lättare att implementera för alla.
+
+Läs lite om projektet:
+https://www.a11yproject.com/about/
+
+
+Tillgänglighet är en viktig del av webbutveckling. Det handlar om att göra webbplatser och appar tillgängliga för alla,
+inklusive personer med funktionsnedsättningar. Det finns många sätt att göra en webbplats mer tillgänglig, till exempel
+att använda semantisk HTML, skapa enkel navigering och använda alternativa texter för bilder.
+ ____________________________________________________________________________________________________
  1. Läs noga genom koden och identifiera alla tillgänglighetsproblem.
  
  2. Testa kör lighthouse i devtools(Google chrome) och se vilka problem som finns.
@@ -12,6 +23,7 @@
  6. Testa din nya kod med andra verktyg för tillgänglighet.
 
  7. Skriv en kort reflektion över hur det var att göra uppgiften. Vad var svårt? Vad lärde du dig?
+ ____________________________________________________________________________________________________
 
 -->
 
@@ -30,15 +42,15 @@
     <!-- Navigeringsmeny med dubblett-ID:n, inkonsekvent tabindex, och brutna länkar till en 404-sida. -->
     <nav class="navigation">
         <span class="nav-item" id="1" tabindex="-1"><a href="404.html" target="_blank">Home</a></span>
-        <span class="nav-item" id="1" tabindex="-1"><a href="404.html" target="_blank">World</a></span>
+        <span class="nav-item" id="1" tabindex="-1"><a href="404.html">World</a></span>
         <span class="nav-item" id="1"><a href="404.html">Sports</a></span>
         <span class="nav-item" id="1"><a href="404.html" target="_blank">Entertainment</a></span>
     </nav>
 
-    <!--  -->
+    <!-- Svåråtkomligt inputfällt -->
     <div class="input-container">
         <input type="text" placeholder="Enter text">
-        <button><a href="#">Submit</a></button>
+        <button><a href="#">Search</a></button>
     </div>
 
     <!-- Dold text och klickbar div. 
