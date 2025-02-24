@@ -34,6 +34,7 @@ Det finns många sätt att göra en webbplats mer tillgänglig, till exempel att
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- Endast en `<title>` används; flera kan orsaka oväntat beteende och påverka SEO samt tillgänglighet negativt. -->
     <title>A11y News</title>
     <title>A11y News dupe</title>
 </head>
@@ -72,6 +73,7 @@ Det finns många sätt att göra en webbplats mer tillgänglig, till exempel att
             <a href="404.html">Click here!</a>
         </div>
 
+        <!-- Klicka på artikeln för att visa ett meddelande, men den utför egentligen inget. -->
         <div class="article" onclick="alert('This does nothing!')">
             <div>Lunar New Year: Celebrate with us!</div>
 
