@@ -30,10 +30,10 @@ setTimeout(() => {
   }
 }, 1000)
 
-// Visar en alert när sidan har laddats
-document.addEventListener("DOMContentLoaded", function () {
-  alert("Page loaded!")
-})
+// // Visar en alert när sidan har laddats
+// document.addEventListener("DOMContentLoaded", function () {
+//   alert("Page loaded!")
+// })
 
 // Loggar 100 000 siffror direkt när sidan laddas
 for (let i = 0; i < 100000; i++) {
